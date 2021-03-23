@@ -1,0 +1,12 @@
+public class Solution {
+    public int coverPoints(int[] A, int[] B) {
+        int sum = 0;
+        for(int i=1;i<A.length;i++){
+            int v1 = Math.abs(A[i] - A[i-1]);
+            int v2 = Math.abs(B[i] - B[i-1]);
+            int max = Math.max(v1,v2);
+            sum+=max;
+        }
+        return sum;
+    }
+}
